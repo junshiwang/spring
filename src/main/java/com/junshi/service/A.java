@@ -1,21 +1,13 @@
 package com.junshi.service;
 
-import com.junshi.annotation.Say;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
+@Lazy
 public class A {
 
-    @Autowired
-    private B b;
-
-    public void setB(B b) {
-        this.b = b;
-    }
-
-    @Say("hello")
-    public void say() {
-        this.b.say();
+    public A() {
+        System.out.println("A construct");
     }
 }

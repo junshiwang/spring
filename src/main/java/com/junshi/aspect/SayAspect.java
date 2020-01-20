@@ -18,9 +18,9 @@ public class SayAspect {
     public Object say(ProceedingJoinPoint pj) throws Throwable {
         Say annotationSay = getAnnotationSay(pj);
         System.out.println(annotationSay.value());
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>");
+        System.out.println("SayAspect before");
         Object object = pj.proceed();
-        System.out.println("22222222222222");
+        System.out.println("SayAspect before");
         return object;
     }
 
